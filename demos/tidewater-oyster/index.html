@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tidewater Oyster Bar · Raw bar &amp; harbor kitchen</title>
+<meta name="description" content="Tidewater Oyster Bar: a dozen oysters, a cold glass, and the water twenty feet away. Raw bar, harbor kitchen, reservations. Concept demo by Hoxie Ventures.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=zodiak@700,900&f[]=zodiak@1,700&f[]=general-sans@400,500,600&f[]=erode@500,600&display=swap">
+<style>
+:root{--sea:#062A2E;--sea-2:#0B3A40;--deep:#031C1F;--shell:#E9E4DA;--shell-2:#C9C1B2;--brass:#C9A45C;--brass-2:#E3C482;--coral:#F28B7A;--line:rgba(233,228,218,.14);--disp:'Zodiak',Georgia,serif;--body:'General Sans',system-ui,sans-serif;--caps:'Erode',Georgia,serif;--ease:cubic-bezier(.32,.72,0,1)}
+*{box-sizing:border-box}html,body{overflow-x:clip}
+body{margin:0;background:var(--sea);color:var(--shell);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+::selection{background:var(--brass);color:var(--deep)}
+.water{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(1000px 700px at 70% 0%,rgba(201,164,92,.16),transparent 60%),radial-gradient(900px 600px at 0% 100%,rgba(242,139,122,.10),transparent 60%),linear-gradient(180deg,var(--sea),var(--deep))}
+.caustic{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><filter id='c'><feTurbulence type='turbulence' baseFrequency='.012' numOctaves='2' seed='3'/><feColorMatrix values='0 0 0 0 .9 0 0 0 0 .85 0 0 0 0 .7 0 0 0 .6 -.2'/></filter><rect width='100%' height='100%' filter='url(%23c)'/></svg>");background-size:800px 800px;animation:drift 40s linear infinite}
+@keyframes drift{to{background-position:800px 400px}}
+.page{position:relative;z-index:1}
+.wrap{width:min(1240px,100% - 48px);margin-inline:auto}
+.disp{font-family:var(--disp);font-weight:700;line-height:.95;letter-spacing:-.02em}
+.caps{font-family:var(--caps);font-weight:600;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--brass-2)}
+.rule{display:flex;align-items:center;gap:18px}.rule::before,.rule::after{content:"";flex:1;height:1px;background:var(--line)}
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:40;padding:22px 0;transition:background .5s var(--ease),padding .5s var(--ease)}
+.nav.solid{background:rgba(3,28,31,.85);backdrop-filter:blur(12px);padding:14px 0;border-bottom:1px solid var(--line)}
+.nav .in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px}
+.nav .logo{text-align:center;font-family:var(--disp);font-weight:900;font-size:26px;letter-spacing:-.01em}
+.nav .logo small{display:block;font-family:var(--caps);font-size:9px;letter-spacing:.4em;color:var(--brass-2);font-weight:500}
+.nav nav{display:flex;gap:28px;font-family:var(--caps);font-size:11px;letter-spacing:.28em;text-transform:uppercase}
+.nav nav.r{justify-content:flex-end}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 26px;border:1px solid var(--brass);color:var(--shell);font-family:var(--caps);font-size:11px;letter-spacing:.3em;text-transform:uppercase;transition:background .4s var(--ease),color .4s var(--ease),transform .4s var(--ease)}
+.btn:hover{background:var(--brass);color:var(--deep);transform:translateY(-2px)}
+.btn-fill{background:var(--brass);color:var(--deep)}.btn-fill:hover{background:var(--brass-2)}
+@media (max-width:900px){.nav .in{grid-template-columns:1fr auto}.nav nav.l{display:none}.nav nav.r{gap:14px}}
+/* hero */
+.hero{position:relative;min-height:100dvh;display:flex;align-items:flex-end;overflow:hidden}
+.hero .bg{position:absolute;inset:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 55%;transform:scale(1.08);animation:kb 18s ease-out both;filter:saturate(.9) contrast(1.05)}
+@keyframes kb{to{transform:scale(1)}}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,42,46,.35),rgba(6,42,46,.15) 40%,rgba(3,28,31,.95) 100%)}
+.hero .in{position:relative;padding:160px 0 70px;display:grid;grid-template-columns:1.2fr .8fr;align-items:end;gap:40px;width:min(1240px,100% - 48px);margin:0 auto}
+.hero h1{font-size:clamp(60px,9.5vw,148px);margin:16px 0 20px;max-width:9ch;font-weight:900}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}.hero h1 .ln span{display:block;transform:translateY(110%)}
+.hero h1 em{font-style:italic;font-weight:700;color:var(--brass-2)}
+.hero .lead{font-size:clamp(18px,1.5vw,21px);max-width:480px;color:var(--shell-2);margin:0 0 30px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.tide{justify-self:end;text-align:right;border-left:1px solid var(--line);padding-left:26px;display:grid;gap:8px}
+.tide .big{font-family:var(--disp);font-size:clamp(40px,4.4vw,64px);line-height:1;font-weight:700;color:var(--shell)}
+.tide .big small{font-family:var(--caps);font-size:11px;letter-spacing:.3em;color:var(--brass-2);display:block;margin-top:8px}
+@media (max-width:900px){.hero .in{grid-template-columns:1fr;padding:130px 0 60px}.tide{justify-self:start;text-align:left;border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:20px}}
+/* ticker */
+.tk{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:14px 0;background:rgba(3,28,31,.6)}
+.tk .t{display:flex;gap:44px;width:max-content;white-space:nowrap;animation:mq 42s linear infinite;font-family:var(--caps);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--shell-2)}
+.tk .t span::after{content:"◦";margin-left:44px;color:var(--brass)}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:clamp(90px,11vw,150px) 0}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:56px}
+.sh h2{font-size:clamp(44px,6vw,92px);margin:14px 0 0;max-width:12ch}
+.sh p{max-width:420px;color:var(--shell-2);margin:0 0 8px}
+@media (max-width:820px){.sh{flex-direction:column;align-items:flex-start}}
+/* raw bar list */
+.raw{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.raw .list{display:flex;flex-direction:column}
+.oy{display:grid;grid-template-columns:1fr auto;gap:8px 20px;padding:20px 0;border-top:1px solid var(--line);align-items:baseline;transition:padding .35s var(--ease)}
+.oy:last-child{border-bottom:1px solid var(--line)}
+.oy:hover{padding-left:12px}
+.oy b{font-family:var(--disp);font-weight:700;font-size:26px}
+.oy .p{font-family:var(--caps);font-size:13px;letter-spacing:.2em;color:var(--brass-2)}
+.oy small{grid-column:1/-1;color:var(--shell-2);font-size:15px}
+.raw .pic{position:sticky;top:110px}
+.raw .pic img{aspect-ratio:4/5;width:100%;object-fit:cover;border:1px solid var(--line);padding:10px;background:rgba(3,28,31,.5)}
+.raw .pic figcaption{margin-top:14px;font-family:var(--caps);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--brass-2)}
+@media (max-width:900px){.raw{grid-template-columns:1fr}.raw .pic{position:relative;top:auto}}
+/* numerals */
+.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:70px}
+.nums div{border-top:1px solid var(--brass);padding-top:18px}
+.nums b{font-family:var(--disp);font-weight:900;font-size:clamp(52px,6vw,88px);line-height:1;display:block}
+.nums span{font-family:var(--caps);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--shell-2)}
+@media (max-width:760px){.nums{grid-template-columns:1fr}}
+/* reel */
+.reel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 24px 24px;scrollbar-width:none}
+.reel::-webkit-scrollbar{display:none}
+.reel figure{margin:0;flex:0 0 min(460px,80vw);scroll-snap-align:start;position:relative}
+.reel img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:saturate(.85)}
+.reel figure:nth-child(even){margin-top:60px}
+.reel figcaption{position:absolute;left:16px;bottom:16px;font-family:var(--caps);font-size:11px;letter-spacing:.3em;text-transform:uppercase;background:rgba(3,28,31,.75);padding:8px 12px;backdrop-filter:blur(6px)}
+/* kitchen menu 2-col */
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:16px 64px}
+.it{display:flex;gap:14px;align-items:baseline;padding:16px 0;border-bottom:1px dotted rgba(233,228,218,.25);flex-wrap:wrap}
+.it b{font-family:var(--disp);font-size:22px;font-weight:700}
+.it i{flex:1;min-width:20px}
+.it .p{font-family:var(--caps);font-size:13px;letter-spacing:.2em;color:var(--brass-2)}
+.it small{width:100%;color:var(--shell-2);font-size:15px;margin-top:-6px}
+@media (max-width:760px){.menu{grid-template-columns:1fr}}
+/* reserve */
+.res{position:relative;overflow:hidden;border:1px solid var(--line);padding:clamp(48px,7vw,90px);display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;background:rgba(3,28,31,.55)}
+.res::before{content:"";position:absolute;inset:0;background:url(assets/img/harbor-1400.webp) center/cover;opacity:.25;filter:saturate(.7)}
+.res>*{position:relative}
+.res h2{font-size:clamp(44px,6vw,90px);margin:12px 0 18px;font-weight:900}
+.res p{color:var(--shell-2);max-width:480px;margin:0 0 26px}
+.res .card{background:var(--shell);color:var(--deep);padding:30px;border:6px double var(--brass)}
+.res .card .caps{color:var(--sea)}
+.res .card .t{font-family:var(--disp);font-weight:900;font-size:40px;margin:8px 0 12px;line-height:1}
+.res .card table{width:100%;border-collapse:collapse;font-size:16px}
+.res .card td{padding:8px 0;border-top:1px solid rgba(6,42,46,.2)}.res .card td:last-child{text-align:right;font-family:var(--caps);font-size:12px;letter-spacing:.16em}
+@media (max-width:900px){.res{grid-template-columns:1fr}}
+footer.ft{padding:28px 0 90px;font-family:var(--caps);font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--shell-2);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line)}
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:45;background:var(--deep);border-top:1px solid var(--line);padding:8px;gap:8px}
+.mbar a{flex:1;display:flex;align-items:center;justify-content:center;padding:14px;font-family:var(--caps);font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--shell)}
+.mbar a.b{background:var(--brass);color:var(--deep)}
+@media (max-width:760px){.mbar{display:flex}}
+.rv{opacity:0;transform:translateY(24px)}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.hero h1 .ln span{transform:none}.tk .t,.caustic,.hero .bg img{animation:none}}
+</style>
+</head>
+<body>
+<div class="water"></div><div class="caustic"></div>
+<div class="page">
+<header class="nav" id="nav"><div class="wrap in"><nav class="l"><a href="#raw">Raw bar</a><a href="#kitchen">Kitchen</a><a href="#reel">The room</a></nav><a class="logo" href="#">Tidewater<small>Oyster bar · Harbor kitchen</small></a><nav class="r"><a href="#reserve">Hours</a><a href="tel:+12035550190">Reserve</a></nav></div></header>
+
+<section class="hero">
+  <div class="bg"><img src="assets/img/hero-1800.webp" srcset="assets/img/hero-800.webp 800w, assets/img/hero-1280.webp 1280w, assets/img/hero-1800.webp 1800w" sizes="100vw" alt="A platter of oysters on ice" fetchpriority="high"></div>
+  <div class="shade"></div>
+  <div class="in">
+    <div>
+      <div class="caps rv">Raw bar · Harbor kitchen · Est. 2019</div>
+      <h1 class="disp"><span class="ln"><span>A dozen</span></span><span class="ln"><span>oysters, <em>a cold</em></span></span><span class="ln"><span>glass, the water.</span></span></h1>
+      <p class="lead rv">Shucked to order from beds twenty miles up the coast. A short kitchen menu that changes with the boats. Reservations for six or more; the bar is first come.</p>
+      <div class="ctas rv"><a class="btn btn-fill" href="tel:+12035550190">Reserve a table</a><a class="btn" href="#raw">Tonight's raw bar</a></div>
+    </div>
+    <div class="tide rv"><div class="caps">Tonight</div><div class="big" id="tideTime">5:24 PM<small id="tideLabel">Oysters $2 until 6</small></div><div class="caps">High tide 7:41 PM</div></div>
+  </div>
+</section>
+
+<div class="tk" aria-hidden="true"><div class="t"><span>Blue Points</span><span>Wellfleets</span><span>Kumamotos</span><span>Lobster roll, warm butter</span><span>$2 oysters, 4 – 6</span><span>Sunday brunch</span><span>Blue Points</span><span>Wellfleets</span><span>Kumamotos</span><span>Lobster roll, warm butter</span><span>$2 oysters, 4 – 6</span><span>Sunday brunch</span></div></div>
+
+<section id="raw"><div class="wrap">
+  <div class="sh"><div><div class="caps rv">The raw bar</div><h2 class="disp rv">Tonight's oysters.</h2></div><p class="rv">Six to nine varieties a night, listed at the bar. Ask what came in this morning.</p></div>
+  <div class="raw">
+    <div class="list">
+      <div class="oy rv"><b>Blue Point</b><span class="p">$2.75</span><small>Long Island Sound. Briny, clean, the house standard.</small></div>
+      <div class="oy rv"><b>Wellfleet</b><span class="p">$3.50</span><small>Cape Cod. Salty front, sweet finish.</small></div>
+      <div class="oy rv"><b>Kumamoto</b><span class="p">$4</span><small>Deep cup, melon and cream. The one people fall for.</small></div>
+      <div class="oy rv"><b>Island Creek</b><span class="p">$3.75</span><small>Duxbury. Full body, buttery.</small></div>
+      <div class="oy rv"><b>Malpeque</b><span class="p">$3.25</span><small>PEI. Light and crisp.</small></div>
+      <div class="oy rv"><b>Dozen of the day</b><span class="p">$34</span><small>Chef's mix, mignonette, cocktail, lemon.</small></div>
+      <div class="oy rv"><b>Littlenecks</b><span class="p">$1.75</span><small>Local. Half dozen minimum.</small></div>
+      <div class="oy rv"><b>The Tower</b><span class="p">$95</span><small>Two dozen oysters, littlenecks, shrimp, half lobster, crab claws. For the table.</small></div>
+    </div>
+    <figure class="pic rv"><img src="assets/img/oyster-dark-1200.webp" alt="A single open oyster on a dark surface"><figcaption>Shucked to order · No exceptions</figcaption></figure>
+  </div>
+  <div class="nums"><div class="rv"><b data-count="9">0</b><span>Varieties tonight</span></div><div class="rv"><b data-count="20">0</b><span>Miles from the beds</span></div><div class="rv"><b data-count="2">0</b><span>Dollar oysters, 4 – 6</span></div></div>
+</div></section>
+
+<section id="reel" style="padding-top:0">
+  <div class="wrap"><div class="sh"><div><div class="caps rv">The room</div><h2 class="disp rv">Water on three sides.</h2></div><p class="rv">Forty seats, a zinc bar, and the dock lights. Scroll sideways.</p></div></div>
+  <div class="reel">
+    <figure class="rv"><img src="assets/img/dining-1200.webp" alt="The dining room"><figcaption>The room</figcaption></figure>
+    <figure class="rv"><img src="assets/img/oysters-ice-1200.webp" alt="Oysters on ice"><figcaption>Raw bar</figcaption></figure>
+    <figure class="rv"><img src="assets/img/boats-1400.webp" alt="Boats at dusk"><figcaption>The dock</figcaption></figure>
+    <figure class="rv"><img src="assets/img/lobster-1000.webp" alt="Lobster"><figcaption>Kitchen</figcaption></figure>
+    <figure class="rv"><img src="assets/img/oysters-pile-1000.webp" alt="Pile of oysters"><figcaption>This morning</figcaption></figure>
+  </div>
+</section>
+
+<section id="kitchen" style="padding-top:0"><div class="wrap">
+  <div class="sh"><div><div class="caps rv">Harbor kitchen</div><h2 class="disp rv">Short menu. Changes with the boats.</h2></div><p class="rv">What's here is what came in. Ask about the fish.</p></div>
+  <div class="menu">
+    <div class="it rv"><b>Lobster roll</b><i></i><span class="p">$32</span><small>Warm butter or cold mayo, toasted split top, fries.</small></div>
+    <div class="it rv"><b>Clam chowder</b><i></i><span class="p">$12</span><small>New England, littlenecks, oyster crackers.</small></div>
+    <div class="it rv"><b>Grilled whole fish</b><i></i><span class="p">market</span><small>Whatever the boat brought. Lemon, herbs, olive oil.</small></div>
+    <div class="it rv"><b>Peel-and-eat shrimp</b><i></i><span class="p">$18</span><small>Old Bay, drawn butter, a lot of napkins.</small></div>
+    <div class="it rv"><b>Fried oysters</b><i></i><span class="p">$16</span><small>Cornmeal crust, remoulade.</small></div>
+    <div class="it rv"><b>Steamers</b><i></i><span class="p">$22</span><small>Broth and butter. Bring a friend.</small></div>
+    <div class="it rv"><b>Seared scallops</b><i></i><span class="p">$29</span><small>Corn, bacon, brown butter.</small></div>
+    <div class="it rv"><b>Key lime pie</b><i></i><span class="p">$9</span><small>Graham crust, torched meringue.</small></div>
+  </div>
+</div></section>
+
+<section id="reserve" style="padding-top:0"><div class="wrap"><div class="res rv">
+  <div><div class="caps">Reservations &amp; hours</div><h2 class="disp">Sit by the water tonight.</h2><p>Bar is first come. Tables of six or more, call ahead. Private dock dinners for up to twenty, May through October.</p><div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-fill" href="tel:+12035550190">Call (203) 555-0190</a><a class="btn" href="https://www.google.com/maps/search/?api=1&query=oyster+bar+harbor" target="_blank" rel="noopener">Directions</a></div></div>
+  <div class="card"><div class="caps">This week</div><div class="t">Open 4 – 11</div><table><tr><td>Tuesday – Thursday</td><td>4 – 10</td></tr><tr><td>Friday – Saturday</td><td>4 – 11</td></tr><tr><td>Sunday brunch</td><td>11 – 3</td></tr><tr><td>Monday</td><td>Closed</td></tr><tr><td>$2 oysters</td><td>Daily 4 – 6</td></tr></table></div>
+</div></div></section>
+<div class="wrap"><footer class="ft"><span>© 2026 Tidewater Oyster Bar · Concept demo by Hoxie Ventures · Fictional business</span><span>Photos: Unsplash</span></footer></div>
+</div>
+<div class="mbar"><a href="tel:+12035550190" class="b">Reserve</a><a href="#raw">Raw bar</a><a href="#kitchen">Kitchen</a></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var nav=document.getElementById('nav');window.addEventListener('scroll',function(){nav.classList.toggle('solid',scrollY>40)},{passive:true});
+function tide(){var d=new Date();var t=d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});var h=d.getHours();var lab=h>=16&&h<18?'Oysters $2 until 6':(h>=18&&h<23?'Kitchen open until 10':'Opens at 4');document.getElementById('tideTime').firstChild.textContent=t;document.getElementById('tideLabel').textContent=lab}tide();setInterval(tide,30000);
+function settle(){document.querySelectorAll('.rv').forEach(function(e){e.style.opacity=1;e.style.transform='none'});document.querySelectorAll('.hero h1 .ln span').forEach(function(s){s.style.transform='none'});document.querySelectorAll('[data-count]').forEach(function(el){el.textContent=el.dataset.count})}
+if(reduce||!window.gsap){settle();return}
+gsap.registerPlugin(ScrollTrigger);setTimeout(settle,4000);
+gsap.timeline({defaults:{ease:'power4.out'}}).to('.hero h1 .ln span',{y:0,duration:1.2,stagger:.12},.3).to('.hero .rv',{opacity:1,y:0,duration:.9,stagger:.12},'-=.7');
+gsap.utils.toArray('.rv').forEach(function(el){if(el.closest('.hero'))return;gsap.to(el,{opacity:1,y:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}})});
+document.querySelectorAll('[data-count]').forEach(function(el){var n=+el.dataset.count,o={v:0};ScrollTrigger.create({trigger:el,start:'top 90%',once:true,onEnter:function(){gsap.to(o,{v:n,duration:1.4,ease:'power2.out',onUpdate:function(){el.textContent=Math.round(o.v)}})}})});
+})();
+</script>
+</body>
+</html>
